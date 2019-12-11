@@ -125,11 +125,11 @@
                         <viewLayoutGuide key="safeArea" id="xDw-1M-10G"/>
                     </view>
                     <connections>
-                        <outlet property="destinationTimeLabel" destination="J7w-eM-0yS" id="Et5-NR-nDa"/>
-                        <outlet property="lastTimeDepartedLabel" destination="fVp-Xt-FQw" id="hmj-h8-Ap5"/>
+                        <outlet property="destinationTimeLabel" destination="U1B-kK-eYt" id="cQF-bv-fjs"/>
+                        <outlet property="lastTimeDepartedLabel" destination="NK1-Am-iMO" id="BLw-Jx-QCH"/>
                         <outlet property="lastimeDepartedLabel" destination="SJl-2E-tIx" id="ZMS-Zu-Pob"/>
-                        <outlet property="presentTimeLabel" destination="5Fo-gx-Gbx" id="fBh-Re-voo"/>
-                        <outlet property="speedLabel" destination="SJl-2E-tIx" id="Rnr-yJ-TUK"/>
+                        <outlet property="presentTimeLabel" destination="Fpu-p2-uYh" id="biN-nl-Mgz"/>
+                        <outlet property="speedLabel" destination="eo3-s0-ZTX" id="B5F-9E-jyE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wxw-Zd-HW1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -148,31 +148,29 @@
                                 <rect key="frame" x="0.0" y="424" width="414" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GtN-81-xON">
-                                <rect key="frame" x="0.0" y="841" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iOO-fu-L7A">
+                                <rect key="frame" x="0.0" y="793" width="414" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <navigationItem id="RmI-pe-Uwt">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="J3c-gG-Ag1">
-                                            <connections>
-                                                <action selector="cancelTapped:" destination="WA6-T4-2uc" id="jgk-Jr-raD"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="STe-dA-JTG">
-                                            <connections>
-                                                <action selector="saveTapped:" destination="WA6-T4-2uc" id="M38-9E-6vv"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <barButtonItem systemItem="cancel" id="NPB-FA-wco">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="WA6-T4-2uc" id="JAa-nL-pG9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="269" style="plain" systemItem="fixedSpace" id="OJU-Wd-yLQ"/>
+                                    <barButtonItem systemItem="done" id="8al-Al-KcS">
+                                        <connections>
+                                            <action selector="doneTapped:" destination="WA6-T4-2uc" id="vtU-oz-nrz"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
-                            </navigationBar>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6be-1F-xmQ"/>
                     </view>
                     <connections>
-                        <outlet property="cancelTapped" destination="GtN-81-xON" id="oqg-Lb-5c8"/>
-                        <outlet property="pickerView" destination="xR6-wX-lkK" id="WYc-WM-zKs"/>
+                        <outlet property="datePicker" destination="xR6-wX-lkK" id="mlP-yD-4lk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D8N-l9-0Dl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

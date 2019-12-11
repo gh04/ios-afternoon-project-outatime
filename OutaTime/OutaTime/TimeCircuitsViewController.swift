@@ -26,7 +26,7 @@ class TimeCircuitsViewController: UIViewController {
     
     var dateFormatter: DateFormatter = {
           let formatter = DateFormatter()
-          formatter.dateFormat = "HH:mm:ss.SS"
+          formatter.dateFormat = "MMM dd yyyy"
           formatter.timeZone = TimeZone(secondsFromGMT: 0)
           return formatter
       }()
@@ -55,6 +55,7 @@ class TimeCircuitsViewController: UIViewController {
      // MARK: - Private
     
     private func startTimer() {
+        resetTimer()
         timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: updateSpeed(timer:))
     }
     
@@ -77,9 +78,9 @@ class TimeCircuitsViewController: UIViewController {
         currentSpeed += 1
         } else {
         resetTimer()
-            self.lastTimeDepartedLabel.text = self.presentTimeLabel.text
-            self.presentTimeLabel.text = self.destinationTimeLabel.text
-            self.currentSpeed = 0
+            lastTimeDepartedLabel.text = presentTimeLabel.text
+            presentTimeLabel.text = destinationTimeLabel.text
+            currentSpeed = 0
         
             guard let newDate = self.presentTimeLabel.text else { return }
         

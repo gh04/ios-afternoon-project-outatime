@@ -10,21 +10,25 @@ import UIKit
 
 
 protocol DatePickerDelegate {
+    
     func destinationDateWasChosen(date: Date)
 }
+
 
 class DatePickerViewController: UIViewController {
    
  //Mark: Outlets
-    @IBOutlet weak var pickerView: UIPickerView!
-    
- //Mark: Properties
+
+    @IBOutlet weak var datePicker: UIDatePicker!
+    //Mark: Properties
     var delegate: DatePickerDelegate?
+   
  
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        datePicker.setValue(UIColor.white, forKey: "textColor")
     }
 
     //Mark: Actions
@@ -33,7 +37,8 @@ class DatePickerViewController: UIViewController {
        }
        
        @IBAction func doneTapped(_ sender: UIBarButtonItem) {
-//        delegate?.destinationDateWasChosen(date: )
+        let date = datePicker.date
+        delegate?.destinationDateWasChosen(date: date)
         dismiss(animated: true, completion: nil)
         
        }
