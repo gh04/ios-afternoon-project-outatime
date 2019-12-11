@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		637146D423A0A3F80024DA3E /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 637146D323A0A3F70024DA3E /* digital-7.ttf */; };
+		637146D723A0A6100024DA3E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63DC2EB823A01B540097AA98 /* Info.plist */; };
 		63DC2EAB23A01B4D0097AA98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC2EAA23A01B4D0097AA98 /* AppDelegate.swift */; };
 		63DC2EAD23A01B4D0097AA98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC2EAC23A01B4D0097AA98 /* SceneDelegate.swift */; };
 		63DC2EB223A01B4D0097AA98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63DC2EB023A01B4D0097AA98 /* Main.storyboard */; };
 		63DC2EB423A01B540097AA98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63DC2EB323A01B540097AA98 /* Assets.xcassets */; };
 		63DC2EB723A01B540097AA98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63DC2EB523A01B540097AA98 /* LaunchScreen.storyboard */; };
 		63DC2EBF23A01B7E0097AA98 /* TimeCircuitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC2EBE23A01B7E0097AA98 /* TimeCircuitsViewController.swift */; };
-		63DC2EC123A01B8F0097AA98 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC2EC023A01B8F0097AA98 /* DatePickerViewController.swift */; };
+		63DC2EC123A01B8F0097AA98 /* DataPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DC2EC023A01B8F0097AA98 /* DataPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		637146D323A0A3F70024DA3E /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
 		63DC2EA723A01B4D0097AA98 /* OutaTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OutaTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63DC2EAA23A01B4D0097AA98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63DC2EAC23A01B4D0097AA98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,7 +28,7 @@
 		63DC2EB623A01B540097AA98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63DC2EB823A01B540097AA98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63DC2EBE23A01B7E0097AA98 /* TimeCircuitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCircuitsViewController.swift; sourceTree = "<group>"; };
-		63DC2EC023A01B8F0097AA98 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		63DC2EC023A01B8F0097AA98 /* DataPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +42,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		637146D523A0A4240024DA3E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				637146D323A0A3F70024DA3E /* digital-7.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		63DC2E9E23A01B4D0097AA98 = {
 			isa = PBXGroup;
 			children = (
@@ -64,8 +75,9 @@
 				63DC2EB323A01B540097AA98 /* Assets.xcassets */,
 				63DC2EB523A01B540097AA98 /* LaunchScreen.storyboard */,
 				63DC2EB823A01B540097AA98 /* Info.plist */,
+				63DC2EC023A01B8F0097AA98 /* DataPickerViewController.swift */,
 				63DC2EBE23A01B7E0097AA98 /* TimeCircuitsViewController.swift */,
-				63DC2EC023A01B8F0097AA98 /* DatePickerViewController.swift */,
+				637146D523A0A4240024DA3E /* Fonts */,
 			);
 			path = OutaTime;
 			sourceTree = "<group>";
@@ -131,6 +143,8 @@
 				63DC2EB723A01B540097AA98 /* LaunchScreen.storyboard in Resources */,
 				63DC2EB423A01B540097AA98 /* Assets.xcassets in Resources */,
 				63DC2EB223A01B4D0097AA98 /* Main.storyboard in Resources */,
+				637146D723A0A6100024DA3E /* Info.plist in Resources */,
+				637146D423A0A3F80024DA3E /* digital-7.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63DC2EC123A01B8F0097AA98 /* DatePickerViewController.swift in Sources */,
+				63DC2EC123A01B8F0097AA98 /* DataPickerViewController.swift in Sources */,
 				63DC2EAB23A01B4D0097AA98 /* AppDelegate.swift in Sources */,
 				63DC2EBF23A01B7E0097AA98 /* TimeCircuitsViewController.swift in Sources */,
 				63DC2EAD23A01B4D0097AA98 /* SceneDelegate.swift in Sources */,
