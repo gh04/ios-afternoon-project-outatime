@@ -6,24 +6,40 @@
 //
 
 import UIKit
+// MARK: - Protocols
+protocol DatePickerDelegate: AnyObject {
+    func destinationDateWasChosen(_ date: Date)
+}
 
 class DatePickerViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    // MARK: - Properties
+    weak var delegate: DatePickerDelegate?
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//    }
+    
+    // MARK: - Actions
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func done(_ sender: UIBarButtonItem) {
+        guard datePicker.date < Date() else { return showAlert() }
+        delegate?.destinationDateWasChosen(datePicker.date)
+        self.dismiss(animated: true, completion: nil)
     }
-    */
+    
+    // MARK: - UIAlert
+    private func showAlert() {
+        let alert = UIAlertController(title: "Invalid date", message: "Pick a date in the past.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+    }
 
 }
+
