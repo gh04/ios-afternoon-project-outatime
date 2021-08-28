@@ -24,7 +24,7 @@ class TimeCircuitsViewController: UIViewController {
     private var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat =  "MMM d, yyyy"
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        formatter.timeZone = TimeZone.current
         return formatter
     }()
     
@@ -84,22 +84,20 @@ class TimeCircuitsViewController: UIViewController {
     }
     
     // MARK: - Alerts
-    func showAlert() {
+   private func showAlert() {
         
         switch alert {
         case .complete:
-            
             guard let presentTime = presetTimeLabel.text else { return }
             let alertController = UIAlertController(title: "Time Travel Successful", message: "You're new date is \(presentTime) ", preferredStyle: .alert)
             let alertAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            
             alertController.addAction(alertAction)
             self.present(alertController, animated: true, completion: nil)
         case .invalidDestination:
             let alert = UIAlertController(title: "No Destination Time", message: "Please set a destination time.", preferredStyle: .alert)
             let okButton = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alert.addAction(okButton)
-            present(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
         default:
             break
         }
